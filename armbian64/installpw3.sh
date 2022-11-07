@@ -6,12 +6,12 @@
   git clone https://github.com/PKTW3/PktWalletWebWrapper.git
   cd PktWalletWebWrapper/webwallet
   npm install
-  echo "installing pktw3 default configuration.... edit it at /etc/pktw3/config.json ** YOU WILL NEED TO CHANGE PASSWORD (changeme) TO WALLET PASSWORD, QRPASSWORD IS YOUR INITIAL CODE GENERATION PASSWORD"
+  echo "installing pktw3 default configuration.... edit it at /etc/pktw3/PktWalletWebWrapper/webwallet/config.json ** YOU WILL NEED TO CHANGE PASSWORD (changeme) TO WALLET PASSWORD, QRPASSWORD IS YOUR INITIAL CODE GENERATION PASSWORD"
   echo '{
           "walletstorage":"/root/.pktwallet/pkt/",
           "wallet_password":"changeme",
           "qrpassword":"changeme",
-          "walletbinpath":"/etc/pktwallet/pktd/bin",
+          "walletbinpath":"/etc/pktwallet/pktd/bin/",
           "clientWebPath": "/etc/pktw3/PktWalletWebWrapper/client/web",
           "explorerUrl": "https://explorer.pkt.cash",
           "listenport": 80,
@@ -22,6 +22,6 @@
         echo 'var socketurl = "http://127.0.0.1";
               var explorerUrl = "https://explorer.pkt.cash";' >> /etc/pktw3/PktWalletWebWrapper/client/web/socketurl.js
 
-        node /etc/pktw3/PktWalletWebWrapper/webwallet/setup/generateauthjson.js
+        cd /etc/pktw3/PktWalletWebWrapper/webwallet/setup && node generateauthjson.js && /etc/pktw3/PktWalletWebWrapper/webwallet/
 
-echo "Run armbian64/pw3daemonsetup.sh after editing config.json"
+        echo "Run 'sh /root/ARMBuilder/armbian64/pw3daemonsetup.sh' after editing /etc/pktw3/PktWalletWebWrapper/webwallet/config.json"

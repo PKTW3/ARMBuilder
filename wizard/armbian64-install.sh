@@ -17,7 +17,7 @@ echo 'https://go.dev/doc/install';
 echo "\n"
 echo "\**** Please visit their respective websites for more information"
 
- read -s -n 1 -p "Press any key to continue . . ."
+read -s -n 1 -p "Press any key to continue . . ."
 
 apt-get install -y chromium
 
@@ -44,8 +44,8 @@ if [ ! -d "/etc/pktwallet" ]; then
     echo "** REMEMBER TO WRITE DOWN YOUR SEED AND PASSWORD SOMEWHERE SAFE.. \n"
     read -s -n 1 -p "Press any key to continue . . ."
     sh ../armbian64/walletinit.sh
-    echo "** DAEMONIZING WALLET WITH PM2... \n"
-    sh ../armbian64/walletdaemonsetup.sh
+    #echo "** DAEMONIZING WALLET WITH PM2... \n"
+    #sh ../armbian64/walletdaemonsetup.sh
 fi
 
 if [ ! -d /etc/pktw3 ]
