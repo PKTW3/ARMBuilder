@@ -18,10 +18,13 @@
           "listenip": "127.0.0.1",
           "unconsolidatedTransationsFold": 200
         }' >> /etc/pktw3/PktWalletWebWrapper/webwallet/config.json
-        rm -rf /etc/pktw3/PktWalletWebWrapper/client/web/socketurl.js
+        rm -rf /etc/pktw3/PktWalletWebWrapper/client/web/js/socketurl.js
         echo 'var socketurl = "http://127.0.0.1";
-              var explorerUrl = "https://explorer.pkt.cash";' >> /etc/pktw3/PktWalletWebWrapper/client/web/socketurl.js
+              var explorerUrl = "https://explorer.pkt.cash";' >> /etc/pktw3/PktWalletWebWrapper/client/web/js/socketurl.js
 
         cd /etc/pktw3/PktWalletWebWrapper/webwallet/setup && node generateauthjson.js && /etc/pktw3/PktWalletWebWrapper/webwallet/
 
         echo "Run 'sh /root/ARMBuilder/armbian64/pw3daemonsetup.sh' after editing /etc/pktw3/PktWalletWebWrapper/webwallet/config.json"
+
+       echo "** find your QR URL for login from your installed browser of choice on your device @ http://127.0.0.1/qr - https://127.0.0.1 main url **";
+
