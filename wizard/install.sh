@@ -41,6 +41,8 @@ if [ ! -d "/etc/pktwallet" ]; then
   echo "PKT CLI WALLET BINARIES NOT FOUND, INSTALLING PKT CLI WALLET, YOU WILL NEED TO CONFIGURE OPTIONS TO PROCEED"
   sh ../armbian64/install-cli-wallet.sh
     echo "** WALLET DIRECT CONFIGURATION... \n"
+    echo "** REMEMBER TO WRITE DOWN YOUR SEED AND PASSWORD SOMEWHERE SAFE.. \n"
+    read -p "Press any key to resume ..."
     sh ../armbian64/walletinit.sh
     echo "** DAEMONIZING WALLET WITH PM2... \n"
     sh ../armbian64/walletdaemonsetup.sh
