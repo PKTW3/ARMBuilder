@@ -4,7 +4,7 @@
   mkdir /etc/pktw3
   cd /etc/pktw3
   git clone https://github.com/PKTW3/PktWalletWebWrapper.git
-  cd PktWalletWebWrapper
+  cd PktWalletWebWrapper/webwallet
   npm install
   echo "installing pktw3 default configuration.... edit it at /etc/pktw3/config.json ** YOU WILL NEED TO CHANGE PASSWORD (changeme) TO WALLET PASSWORD, QRPASSWORD IS YOUR INITIAL CODE GENERATION PASSWORD"
   echo '{

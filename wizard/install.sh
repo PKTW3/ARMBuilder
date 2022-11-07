@@ -19,6 +19,8 @@ echo "\**** Please visit their respective websites for more information"
 
 read -p "Press any key to resume ..."
 
+apt-get install -y chromium
+
 if ! [ -x "$(command -v go)" ]; then
   echo 'GO IS NOT INSTALLED, INSTALLING NOW...\n'
   sh ../armbian64/install-go.sh
