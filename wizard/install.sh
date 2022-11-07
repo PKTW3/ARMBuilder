@@ -16,7 +16,9 @@ echo "\n"
 echo 'https://go.dev/doc/install';
 echo "\n"
 echo "\**** Please visit their respective websites for more information"
-read -n 1 -s -r -p "Press any key to continue"
+
+read -p "Press any key to resume ..."
+
 if ! [ -x "$(command -v go)" ]; then
   echo 'GO IS NOT INSTALLED, INSTALLING NOW...\n'
   sh ../armbian64/install-go.sh
@@ -30,7 +32,7 @@ fi
 
 if ! [ -x "$(command -v  pm2)" ]; then
   echo 'PM2 IS NOT INSTALLED, INSTALLING NOW... \n'
-  npm -g pm2
+  npm install -g pm2
 fi
 
 if [ ! -d "/etc/pktwallet" ]; then
@@ -44,7 +46,7 @@ fi
 
 if [ ! -d /etc/pktw3 ]
 then
-  sh installpw3.sh
+  sh ../armbian64/installpw3.sh
 else
     echo "Installation exists at: /etc/pktw3/ if you intend to reinstall rm -rf /etc/pktw3 and re-execute this program."
 fi

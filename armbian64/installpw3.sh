@@ -17,11 +17,11 @@
           "listenport": 80,
           "listenip": "127.0.0.1",
           "unconsolidatedTransationsFold": 200
-        }' >> /etc/pktw3/PktWalletWebWrapper/config.json
+        }' >> /etc/pktw3/PktWalletWebWrapper/webwallet/config.json
         rm -rf /etc/pktw3/PktWalletWebWrapper/client/web/socketurl.js
         echo 'var socketurl = "http://127.0.0.1";
               var explorerUrl = "https://explorer.pkt.cash";' >> /etc/pktw3/PktWalletWebWrapper/client/web/socketurl.js
 
-        node /etc/pktw3/PktWalletWebWrapper/setup/generateauthjson.js
+        node /etc/pktw3/PktWalletWebWrapper/webwallet/setup/generateauthjson.js
 
 echo "Run armbian64/pw3daemonsetup.sh after editing config.json"
