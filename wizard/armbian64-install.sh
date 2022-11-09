@@ -19,7 +19,7 @@ echo "\**** Please visit their respective websites for more information"
 
 read -s -n 1 -p "Press any key to continue . . ."
 
-apt-get install -y chromium
+apt-get install -y chromium firefox-esr
 
 if ! [ -x "$(command -v go)" ]; then
   echo 'GO IS NOT INSTALLED, INSTALLING NOW...\n'
