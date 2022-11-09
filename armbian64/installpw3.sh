@@ -24,7 +24,8 @@
 
         cd /etc/pktw3/PktWalletWebWrapper/webwallet/setup && node generateauthjson.js && /etc/pktw3/PktWalletWebWrapper/webwallet/
 
-        echo "Run 'sh /root/ARMBuilder/armbian64/pw3daemonsetup.sh' after editing /etc/pktw3/PktWalletWebWrapper/webwallet/config.json"
-
+        echo "Run 'sh ARMBuilder/armbian64/pw3daemonsetup.sh' after editing /etc/pktw3/PktWalletWebWrapper/webwallet/config.json"
+        read -s -n 1 -p "Please set your initial qr display password, and wallet password in config. Press any key to continue . . ."
+        nano /etc/pktw3/PktWalletWebWrapper/webwallet/config.json
        echo "** find your QR URL for login from your installed browser of choice on your device @ http://127.0.0.1/qr - https://127.0.0.1 main url **";
 
