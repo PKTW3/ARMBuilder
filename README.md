@@ -5,6 +5,6 @@ USAGE
 
 git clone https://github.com/PKTW3/ARMBuilder.git
 
-cd ARMBuilder
+cd ARMBuilder/wizard
 
-sh ./wizard/armbian64-install.sh
+sh armbian64-install.sh
